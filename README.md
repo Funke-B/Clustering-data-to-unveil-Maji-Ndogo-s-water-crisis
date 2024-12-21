@@ -3,44 +3,59 @@
 This project is about using data to understand and solve water-related problems in Maji Ndogo. By organizing and analyzing the information, we can identify patterns and trends, such as areas with the most water challenges. The goal is to take this knowledge and turn it into practical steps to make clean water more available and accessible to everyone in the community.
 ![Project Overview](./images/IMG_4135.PNG)
 
-## Project Overview
-
-The analysis is centered on:
-
-- Identify patterns in water source usage and quality.
-- Identifying infrastructure needs for various water source types
-- Tracking employee data to assess improvement efforts
-- Generating recommendations for improvement (e.g., installing filters, diagnosing infrastructure issues, etc.)
-- Highlight pollution issues and propose corrections
-
-## Key Tasks:
-- Understand the Data: Analyze foundational tables like water sources, visits, and quality metrics.
-- Explore Visit Patterns: Identify frequently visited locations, long queue times, and possible inefficiencies.
-- Assess Water Quality: Filter high-visit, poor-quality sources and flag errors in cleanliness reports.
-- Investigate Pollution: Correct inconsistencies in pollution data using SQL and validate results.
-
-## Insights and Recommendations
-
-- Water source distribution and usage patterns.
-- Locations with the longest queues or highest contamination.
-- Areas requiring immediate intervention based on pollution.
+## Project Objective
 
 
+Data cleaning:
+
+- Standardized employee email formats.
+- Identified and corrected inconsistencies in phone numbers.
+
+Data Exploration:
+- Clustered data by location and source type.
+- Explored queueing patterns for water collection.
+
+Insights Generation:
+- Analyzed the distribution of water sources across provinces and towns.
+- Calculated the percentage of water sources in rural vs. urban areas.
+- Assessed the capacity and condition of water sources.
+
+## Data Analysis Highlights
+
+- Key Findings
+Water Source Distribution:
+
+- 60% of water sources are located in rural areas.
+- Shared taps serve 43% of the population, with an average of 2,000 users per tap.
+  
+Infrastructure Challenges:
+
+- 31% of people have taps at home, but 45% of these are non-functional due to infrastructure issues.
+- Only 28% of wells provide clean water.
+  
+Queue Analysis:
+
+- Average queue time for water collection: 123 minutes.
+- Queue times vary significantly by day and source.
+
+##  Recommendations
+
+- Prioritize Repairs: Focus on shared taps and high-capacity water sources.
+- Data-Driven Ranking: Use SQL ranking functions to guide repair efforts.
 
 ## Database Structure
 
 The project uses the following tables:
 
 - **`visits`**: Contains information on visits to each water source, including queue times and assigned employees.
-- **`well_pollution`**: Tracks pollution results for well water sources.
+- **`employee`**: contains information of employee details including IDs, address and phone number.
 - **`water_source`**: Stores metadata on each water source, including type and population served.
 - **`location`**: Stores location-specific information, including town, province, and address.
-- **`Project_progress`**: Tracks improvement projects for each source, including status and comments.
 
 ## Key Features
 
-1. **Project Tracking**: Automatically updates improvement recommendations based on water quality results and queue times.
-2. **Employee Performance**: Monitors employee performance by tracking discrepancies between auditor and surveyor assessments.
+1. **Project Tracking**: Automatically updates Employee details including emails and phone number.
+2. **Employee Performance**: Checked for employees with the highest number of location visits
 3. **Infrastructure Recommendations**: Generates specific infrastructure improvement actions based on data (e.g., installing additional taps for long queues).
 
 ## How to Run the Project
